@@ -5,15 +5,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./Navigation.css";
 
 function Navigation() {
-  const { pathname } = useLocation(); // Use destructuring to extract pathname from location
-  const [activeButton, setActiveButton] = useState(pathname); // Store the active button path
+  const { pathname } = useLocation();
+  const [activeButton, setActiveButton] = useState(pathname);
 
   useEffect(() => {
-    setActiveButton(pathname); // Update active button on path change
-  }, [pathname]); // Only depend on pathname for optimization
+    setActiveButton(pathname);
+  }, [pathname]);
 
   const handleButtonClick = (path) => {
-    setActiveButton(path); // Update active button on click
+    setActiveButton(path);
   };
 
   const logo = "<mods/>";
